@@ -41,6 +41,8 @@ export default Ember.Component.extend({
 
   top: '50%',
 
+  style: 'position: relative;',
+
   actions: {
     click: function () {
       if (!this.get('isSpinning')) {
@@ -55,7 +57,8 @@ export default Ember.Component.extend({
 
   maintainButtonDimensions: function () {
     if (this.get('isSpinning')) {
-      this.set('style', 'width: '+ this.$().innerWidth() +'px; height: '+ this.$().innerHeight() +'px;');
+      this.set('style', 'position: relative; width: '+ this.$().outerWidth() +'px; height: '+ this.$().outerHeight() +
+                        'px;');
     } else {
       this.set('style', null);
     }
