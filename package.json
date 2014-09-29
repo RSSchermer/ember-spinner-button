@@ -1,0 +1,45 @@
+{
+  "name": "ember-spinner-button",
+  "version": "0.0.1",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "ember test"
+  },
+  "repository": "https://github.com/rsschermer/ember-spinner-button",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.2.0",
+    "broccoli-asset-rev": "0.1.1",
+    "broccoli-ember-hbs-template-compiler": "^1.6.1",
+    "ember-cli": "0.0.46",
+    "ember-cli-ic-ajax": "0.1.1",
+    "ember-cli-inject-live-reload": "^1.0.2",
+    "ember-cli-qunit": "0.1.0",
+    "express": "^4.8.5",
+    "glob": "^4.0.5",
+    "ember-spin-spinner": "0.0.2"
+  },
+  "keywords": [
+    "ember-addon",
+    "ember-component",
+    "spinner-button",
+    "button",
+    "spinner",
+    "spin.js",
+    "spinjs",
+    "spin"
+  ],
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  },
+  "bugs": {
+    "url": "https://github.com/rsschermer/ember-spinner-button/issues"
+  },
+  "homepage": "https://github.com/rsschermer/ember-spinner-button"
+}
