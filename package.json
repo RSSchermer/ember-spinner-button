@@ -1,6 +1,6 @@
 {
   "name": "ember-spinner-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "directories": {
     "test": "tests"
   },
@@ -13,6 +13,9 @@
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "ember-spin-spinner": "0.0.2"
+  },
   "devDependencies": {
     "body-parser": "^1.2.0",
     "broccoli-asset-rev": "0.1.1",
@@ -22,8 +25,7 @@
     "ember-cli-inject-live-reload": "^1.0.2",
     "ember-cli-qunit": "0.1.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5",
-    "ember-spin-spinner": "0.0.2"
+    "glob": "^4.0.5"
   },
   "keywords": [
     "ember-addon",
