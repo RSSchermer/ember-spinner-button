@@ -14,7 +14,9 @@ ember generate ember-spin-spinner
 Example:
 
 ``` handlebars
-{{spinner-button action=saveForm isSpinning=isSaving}}
+{{#spinner-button action=saveForm isSpinning=isSaving}}
+  Save
+{{/spinner-button}}
 ```
 
 The following properties should be set:

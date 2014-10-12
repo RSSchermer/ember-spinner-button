@@ -43,15 +43,9 @@ export default Ember.Component.extend({
 
   style: 'position: relative;',
 
-  actions: {
-    click: function () {
-      if (!this.get('isSpinning')) {
-        this.sendAction();
-      } else {
-        if (this.get('action')) {
-          this.sendAction(this.get('action'));
-        }
-      }
+  click: function () {
+    if (!this.get('isSpinning')) {
+      this.sendAction();
     }
   },
 
