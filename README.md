@@ -2,6 +2,9 @@
 
 Simple Ember spinner button component using [spin.js](http://fgnass.github.io/spin.js/).
 
+## Demo
+Demo available [here](http://rsschermer.github.io/ember-spinner-button/).
+
 ## Installation
 
 ``` bash
