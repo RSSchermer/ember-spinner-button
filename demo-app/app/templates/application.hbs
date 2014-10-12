@@ -1,0 +1,28 @@
+<section class="container">
+  <h1 id='title'>Ember spinner-button Demo</h2>
+
+  <p>This is a demo application for the Ember spinner-button component. Documentation for this component can be found
+    <a href="">here</a>. The source for this demo application can be found
+    <a href="">here</a>.
+  </p>
+
+  <p>This demo uses Twitter Bootstrap, which affects the appearence of the spinner-button as you would expect.</p>
+
+  <p>This isSpinning property of this button is bound to the isBusy property on the application controller. You can use
+    the checkbox to toggle the value of isBusy. Clicking the button sends a 'makeBusy' event to the controller. The
+    handler for this event on the controller sets isBusy to true.
+  </p>
+
+  <p>
+    <label>
+      {{input type="checkbox" name="isBusy" checked=isBusy}}
+      isBusy
+    </label>
+  </p>
+
+  <p>
+    {{#spinner-button class='btn btn-primary' action='makeBusy' isSpinning=isBusy}}
+      I'm a spinner-button!
+    {{/spinner-button}}
+  </p>
+</section>
