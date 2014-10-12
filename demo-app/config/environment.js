@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'spinner-button-demo-app',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/ember-spinner-button',
     locationType: 'auto',
     contentSecurityPolicy: {
       'default-src': "'none'",
