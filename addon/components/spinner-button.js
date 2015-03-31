@@ -49,12 +49,12 @@ export default Ember.Component.extend({
     }
   },
 
-  maintainButtonDimensions: function () {
+  maintainButtonDimensions: Ember.observer('isSpinning', function () {
     if (this.get('isSpinning')) {
       this.set('style', 'position: relative; width: '+ this.$().outerWidth() +'px; height: '+ this.$().outerHeight() +
                         'px;');
     } else {
       this.set('style', null);
     }
-  }.observes('isSpinning').on('didInsertElement')
+  })
 });

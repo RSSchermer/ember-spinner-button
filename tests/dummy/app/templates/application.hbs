@@ -1,3 +1,14 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<h2 id="title">Welcome to Ember.js</h2>
 
-{{outlet}}
+<p>
+  <label>
+    {{input type="checkbox" name="isBusy" checked=isBusy}}
+    isBusy
+  </label>
+</p>
+
+<p>
+  {{#spinner-button class='btn btn-primary' action='makeBusy' isSpinning=isBusy}}
+    I'm a spinner-button!
+  {{/spinner-button}}
+</p>

@@ -7,22 +7,22 @@ var App;
 moduleForComponent('spinner-button', 'SpinnerButtonComponent', {
   needs: ['component:spin-spinner'],
 
-  setup: function() {
+  beforeEach: function() {
     App = startApp();
   },
 
-  teardown: function() {
+  afterEach: function() {
     Ember.run(App, 'destroy');
   }
 });
 
-test('does not display a spinner when isSpinning is false', function () {
+test('does not display a spinner when isSpinning is false', function (assert) {
   var $component = this.append();
 
-  equal($component.find('.spin-spinner').length, 0);
+  assert.equal($component.find('.spin-spinner').length, 0);
 });
 
-test('does display a spinner when isSpinning is true', function () {
+test('does display a spinner when isSpinning is true', function (assert) {
   var component = this.subject();
   var $component = this.append();
 
@@ -30,15 +30,15 @@ test('does display a spinner when isSpinning is true', function () {
     component.set('isSpinning', true);
   });
 
-  equal($component.find('.spin-spinner').length, 1);
+  assert.equal($component.find('.spin-spinner').length, 1);
 });
 
-test('sends the action when clicked when isSpinning is false', function () {
+test('sends the action when clicked when isSpinning is false', function (assert) {
   var component = this.subject();
 
   var targetObject = {
     dummyAction: function(){
-      ok(true, 'external Action was called!');
+      assert.ok(true, 'external Action was called!');
     }
   };
 
