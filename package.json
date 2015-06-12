@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ember-spin-spinner": "0.2.1",
+    "ember-spin-spinner": "0.2.2",
     "ember-cli-babel": "^4.0.0"
   },
   "devDependencies": {

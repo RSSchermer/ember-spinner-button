@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  attributeBindings: ['style'],
-
   tagName: 'button',
 
   classNames: ['spinner-button'],
@@ -41,20 +39,27 @@ export default Ember.Component.extend({
 
   top: '50%',
 
-  style: 'position: relative;',
-
   click: function () {
     if (!this.get('isSpinning')) {
       this.sendAction();
     }
   },
 
-  maintainButtonDimensions: Ember.observer('isSpinning', function () {
+  setPositionToRelative: Ember.on('didInsertElement', function () {
+    this.$().css('position', 'relative');
+  }),
+
+  maintainButtonDimensions: Ember.on('didInsertElement', Ember.observer('isSpinning', function () {
     if (this.get('isSpinning')) {
-      this.set('style', 'position: relative; width: '+ this.$().outerWidth() +'px; height: '+ this.$().outerHeight() +
-                        'px;');
+      this.$().css({
+        'width': this.$().outerWidth() +'px',
+        'height': this.$().outerHeight() +'px'
+      });
     } else {
-      this.set('style', null);
+      this.$().css({
+        'width': '',
+        'height': ''
+      });
     }
-  })
+  }))
 });
