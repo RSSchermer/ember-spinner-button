@@ -1,6 +1,6 @@
 {
   "name": "ember-spinner-button",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Ember spinner button component.",
   "directories": {
     "test": "tests"
