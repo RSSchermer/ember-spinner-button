@@ -10,8 +10,8 @@ Demo available [here](http://rsschermer.github.io/ember-spinner-button/).
 ## Installation
 
 ``` bash
-npm install ember-spinner-button --save-dev
-ember generate ember-spin-spinner
+ember install ember-spinner-button
+ember generate ember-spinner-button
 ```
 
 ## Usage
