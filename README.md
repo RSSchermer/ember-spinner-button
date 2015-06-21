@@ -11,7 +11,6 @@ Demo available [here](http://rsschermer.github.io/ember-spinner-button/).
 
 ``` bash
 ember install ember-spinner-button
-ember generate ember-spinner-button
 ```
 
 ## Usage
