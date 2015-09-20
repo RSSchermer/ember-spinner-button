@@ -39,12 +39,6 @@ export default Ember.Component.extend({
 
   top: '50%',
 
-  click: function () {
-    if (!this.get('isSpinning')) {
-      this.sendAction();
-    }
-  },
-
   setPositionToRelative: Ember.on('didInsertElement', function () {
     this.$().css('position', 'relative');
   }),
@@ -61,5 +55,11 @@ export default Ember.Component.extend({
         'height': ''
       });
     }
-  }))
+  })),
+
+  click() {
+    if (!this.get('isSpinning')) {
+      this.sendAction();
+    }
+  }
 });

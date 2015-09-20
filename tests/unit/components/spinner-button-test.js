@@ -1,32 +1,21 @@
 import { test, moduleForComponent } from 'ember-qunit';
-import startApp from '../../helpers/start-app';
 import Ember from 'ember';
 
-var App;
-
 moduleForComponent('spinner-button', 'SpinnerButtonComponent', {
-  needs: ['component:spin-spinner'],
-
-  beforeEach: function () {
-    App = startApp();
-  },
-
-  afterEach: function () {
-    Ember.run(App, 'destroy');
-  }
+  needs: ['component:spin-spinner']
 });
 
 test('does not display a spinner when isSpinning is false', function (assert) {
-  var $component = this.append();
+  let $component = this.append();
 
   assert.equal($component.find('.spin-spinner').length, 0);
 });
 
 test('does display a spinner when isSpinning is true', function (assert) {
-  var component = this.subject();
-  var $component = this.append();
+  let component = this.subject();
+  let $component = this.append();
 
-  Ember.run(function () {
+  Ember.run(() => {
     component.set('isSpinning', true);
   });
 
@@ -34,20 +23,20 @@ test('does display a spinner when isSpinning is true', function (assert) {
 });
 
 test('sends the action when clicked when isSpinning is false', function (assert) {
-  var component = this.subject();
-  var $component = this.append();
+  let component = this.subject();
+  let $component = this.append();
 
-  var targetObject = {
-    dummyAction: function () {
+  let targetObject = {
+    dummyAction: () => {
       assert.ok(true, 'external Action was called!');
     }
   };
 
-  Ember.run(function () {
+  Ember.run(() => {
     component.setProperties({ 'action': 'dummyAction', 'targetObject': targetObject });
   });
 
-  Ember.run(function () {
+  Ember.run(() => {
     $component.click();
   });
 });

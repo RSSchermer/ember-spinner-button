@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   isBusy: false,
 
   actions: {
-    makeBusy: function () {
+    makeBusy() {
       this.set('isBusy', true);
     }
   }
