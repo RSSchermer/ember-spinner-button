@@ -6,6 +6,12 @@ export default Ember.Component.extend({
   classNames: ['spinner-button'],
 
   classNameBindings: ['spinning'],
+  
+  attributeBindings: [ 'disabled', 'title'],
+  
+  disabled: false,
+  
+  title: null,
 
   isSpinning: false,
 
