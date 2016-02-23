@@ -27,11 +27,11 @@ The following properties should be set:
 
 * `isSpinning`: a boolean value indicating whether or not the button is currently spinning.
 * `action`: the action that will be send when the button is clicked while not currently spinning.
- 
-The following properties can be set to customize the buttons attribute behaviour:
 
-* `disabled` (default: `false`): bool or function to determine disabled attribute.
-* `title` (default: `null`): function or string to resolve to the title attribute.
+The following properties can be set to customize the button:
+
+* `disabled` (default: `false`): boolean value or function that specifies the `disabled` attribute.
+* `title` (default: `null`): string or function that resolves to the `title` attribute.
 
 The following properties can be set to customize the spinner on a particular button:
 
