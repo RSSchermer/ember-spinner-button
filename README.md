@@ -18,7 +18,7 @@ ember install ember-spinner-button
 Example:
 
 ``` handlebars
-{{#spinner-button action="saveForm" isSpinning=isSaving}}
+{{#spinner-button onclick=(action "saveForm") isSpinning=isSaving}}
   Save
 {{/spinner-button}}
 ```
@@ -26,7 +26,7 @@ Example:
 The following properties should be set:
 
 * `isSpinning`: a boolean value indicating whether or not the button is currently spinning.
-* `action`: the action that will be send when the button is clicked while not currently spinning.
+* `onclick`: the action that will be called when the button is clicked while not currently spinning.
 
 The following properties can be set to customize the button:
 
