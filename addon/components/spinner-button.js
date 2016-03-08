@@ -6,16 +6,18 @@ export default Ember.Component.extend({
   classNames: ['spinner-button'],
 
   classNameBindings: ['spinning'],
-  
+
   attributeBindings: [ 'disabled', 'title'],
-  
+
   disabled: false,
-  
+
   title: null,
 
   isSpinning: false,
 
   action: null,
+
+  onclick: null,
 
   lines: 8,
 
@@ -65,7 +67,13 @@ export default Ember.Component.extend({
 
   click() {
     if (!this.get('isSpinning')) {
-      this.sendAction();
+      if (this.get('action')) {
+        this.sendAction();
+      }
+
+      if (typeof this.get('onclick') === 'function') {
+        this.get('onclick')();
+      }
     }
   }
 });

@@ -38,3 +38,17 @@ test('sends the action when clicked when isSpinning is false', function (assert)
 
   this.$('#my_button').click();
 });
+
+test('fires the action bound to onclick when clicked when isSpinning is false', function (assert) {
+  this.set('actions.dummyAction', () => {
+    assert.ok(true, 'external Action was called!');
+  });
+  
+  this.render(hbs`
+    {{#spinner-button id="my_button" onclick=(action 'dummyAction') isSpinning=false}}
+      Click me
+    {{/spinner-button}}
+  `);
+
+  this.$('#my_button').click();
+});
