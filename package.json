@@ -1,6 +1,6 @@
 {
   "name": "ember-spinner-button",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ember spinner button component.",
   "directories": {
     "doc": "doc",
@@ -50,7 +50,7 @@
     "spin"
   ],
   "dependencies": {
-    "ember-spin-spinner": "0.2.4",
+    "ember-spin-spinner": "0.3.3",
     "ember-cli-babel": "^5.1.5"
   },
   "ember-addon": {
